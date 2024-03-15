@@ -1,0 +1,29 @@
+﻿@page 
+@model IndexModel 
+@{
+    ViewData["Title"] = "Lista de Empleados";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <!-- Agrega más columnas según sea necesario -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in Model.ListaEmpleados)
+        {
+            <tr>
+                <td>@empleado.Id</td>
+                <td>@empleado.Nombre</td>
+                <td>@empleado.Apellido</td>
+                <!-- Agrega más columnas según sea necesario -->
+            </tr>
+        }
+    </tbody>
+</table>
